@@ -1,0 +1,92 @@
+@keyframes aparicion {
+    from{
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+    }
+}
+
+@keyframes aparicionLetras {
+    from{
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+.conciertos{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.contenedorTitulo{
+    position: absolute;
+    top: 0;
+    width: auto;
+    margin-left: 10%;
+}
+
+.contenedorTitulo h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: auto;
+    color: white;
+    margin-top: 22vh;
+    border-radius: 5px;
+    opacity: 50%;
+    text-shadow: 2px 2px 4px black;
+}
+
+.conciertos video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.degradado{
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(to top, black 0 30%, transparent 70% 100%) ;
+    position: absolute;
+    bottom: -2px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.degradado p {
+    color: white;
+    padding: 10%;
+    padding-bottom: 30px;
+    font-size: 22px;
+    font-style: italic;
+    text-align: center;
+
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: aparicionLetras;
+
+    animation-range: entry 5% cover 40%;
+    animation-fill-mode: both;
+}
+
+.cover {
+    background: black;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: aparicion;
+
+    animation-range: entry 5% cover 80%;
+    animation-fill-mode: both;
+}

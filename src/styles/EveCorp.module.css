@@ -1,0 +1,86 @@
+@keyframes aparicion {
+    from{
+        opacity: 95%;
+    }
+    to{
+        opacity: 0%;
+    }
+}
+
+@keyframes aparicionLetras{
+    from{
+        transform: translateX(-100px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+.evecorp{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.evecorp img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.degradado{
+    background: linear-gradient(to right, white 0 50%, transparent 90% 100%) ;
+    width: 75%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    align-items: center;
+}
+
+.contenedorTextos{
+    margin-top: 30vh;
+}
+
+.contenedorTextos h2{
+    width: 300px;
+    margin-left: 10vw;
+
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: aparicionLetras;
+    animation-range: entry 0% cover 40%; ;
+}
+
+.contenedorTextos p {
+    width: 300px;
+    font-size: 22px;
+    font-style: italic;
+    margin-left: 10vw;
+    text-align: left;
+
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: aparicionLetras;
+    animation-range: entry 0% cover 40%; ;
+}
+
+.cover{
+    width: 100%;
+    height: 100vh;
+    background: black;
+    position: absolute;
+    top: 0;
+
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: aparicion;
+
+    animation-range: entry 10% cover 80%;
+    animation-fill-mode: both;
+}

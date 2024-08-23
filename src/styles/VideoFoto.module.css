@@ -1,0 +1,64 @@
+@keyframes aparicionLetras {
+    from{
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+.videoFoto{
+    width: 100%;
+    height: 100vh;
+    padding-top: 20vh;
+}
+
+.videoFoto h2{
+    color: white;
+    margin-left: 10%;
+    opacity: 90%;
+}
+
+.galeria{
+    
+    width: auto;
+    display: flex;
+    margin: 0 10%;
+    justify-content: space-between;
+}
+
+
+.galeria img{
+    object-fit: cover;
+    width: 20%;
+    height: 50vh;
+    margin: 10px;
+    box-shadow: 1px 1px 10px white;
+}
+
+.galeria img:hover{
+    scale: 103%;
+}
+
+.descripcion{
+    width: auto;
+    padding: 0% 10%;
+    display: flex;
+    align-items: center;
+}
+
+.descripcion p{
+    width: auto;
+    color: lightgray;
+    font-size: 22px;
+    text-align: center;
+
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: aparicionLetras;
+
+    animation-range: entry 5% cover 20%;
+    animation-fill-mode: both;
+}

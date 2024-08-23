@@ -1,0 +1,86 @@
+@keyframes desaparicion {
+    from {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 0%;
+    }
+}
+
+@keyframes aparicion {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+
+.live{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    
+}
+
+.live img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.degradado {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient( to left, white 0 70%, transparent 90% 100%);
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contenedorTextos{
+    width: 50%;
+    margin-right: 10vh;
+    margin-top: 25vh;
+
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: aparicion;
+
+    animation-range: entry 10% cover 30%;
+    animation-fill-mode: both;
+}
+
+ .contenedorTextos h2{
+    width: 100%;
+}
+
+.contenedorTextos p {
+    font-size: 22px;
+    width: 100%;
+    font-size: 22px;
+}
+
+.cover{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background: black;
+
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: desaparicion;
+
+    animation-range: entry 10% cover 50%;
+    animation-fill-mode: both;
+}
